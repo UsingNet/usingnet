@@ -1,0 +1,30 @@
+<div class="lm" style="padding:20px;">
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+            <legend>当前暂无客服在线，请留言：</legend>
+            <div class="contact_info">
+                <div class="pure-control-group">
+                    <label for="lm_email">电子邮件</label>
+                    <input required="required" type="email" name="email" id="lm_email" placeholder="name@example.com"/>
+                </div>
+                <div class="pure-control-group">
+                    <label for="lm_phone">联系电话</label>
+                    <input required="required" type="text" name="phone" id="lm_phone" placeholder="13800000000" />
+                </div>
+            </div>
+            <label for="lm_message">留言</label>
+            <textarea class="pure-input-1" name="body" id="lm_message" placeholder="有什么可以帮助您"></textarea>
+
+            <input type="button" class="pure-button pure-button-primary" value="提交" />
+        </fieldset>
+    </form>
+    <div class="submitted" style="display: none">
+        <div class="alert-dialog">
+            <div class="content">
+                <p>留言提交成功。</p>
+                <p>客服稍后将联系您,请耐心等待。</p>
+                <input type="button" class="pure-button pure-button-primary" value="确定" />
+            </div>
+        </div>
+    </div>
+</div>

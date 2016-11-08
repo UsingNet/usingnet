@@ -1,0 +1,38 @@
+<div class="lm" style="padding:10px 20px;">
+    <form class="pure-form pure-form-stacked" onsubmit="return false;">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="lm_message">问题类型</label>
+                <select name="order_type" class="pure-input-1-2"  required="required">
+                    <option value="" <# if(!$current_title){ #> selected="selected" <# } #>>-- 请选择 --</option>
+                <# for($i=0;$i<($order||[]).length;$i++){$type = $order[$i]; #>
+                    <option value="<# echo $type.title #>" <# if($current_title==$type.title){ #> selected="selected" <# } #> ><# echo $type.title #></option>
+                <# } #>
+                </select>
+            </div>
+            <# for($i=0;$i<($order||[]).length;$i++){$type = $order[$i]; if($type.title != $current_title){continue;} for($j=0;$j < ($type.items || []).length;$j++){$field = $type.items[$j]; #>
+                <# switch($field.type){ case 'textarea': #>
+                    <div class="pure-control-group">
+                        <label for="lm_message"><# echo $field['placeholder'] #></label>
+                        <textarea class="pure-input-1" name="body" id="lm_message" placeholder="<# echo $field['placeholder'] #>" required="required"></textarea>
+                    </div>
+                <# break;case 'input':default: #>
+                    <div class="pure-control-group">
+                        <label for="lm_phone"><# echo $field['placeholder'] #></label>
+                        <input required="required" type="text" name="phone" id="lm_phone" placeholder="<# echo $field['placeholder'] #>" required="required" />
+                    </div>
+                <# break; } #>
+            <# }} #>
+            <button type="submit" class="pure-button pure-button-primary" name="submit">提交</button>
+        </fieldset>
+    </form>
+    <div class="submitted" style="display: none">
+        <div class="alert-dialog">
+            <div class="content">
+                <p>留言提交成功。</p>
+                <p>客服稍后将联系您,请耐心等待。</p>
+                <input type="button" class="pure-button pure-button-primary" value="确定" />
+            </div>
+        </div>
+    </div>
+</div>

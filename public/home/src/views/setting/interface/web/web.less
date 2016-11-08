@@ -1,0 +1,47 @@
+.invite-preview {
+  position       : absolute;
+  top            : -24px;
+  left           : 360px;
+  border         : 1px solid #F0F0F0;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  border-radius  : 4px;
+  padding        : 10px;
+
+  span {
+    position: absolute;
+    top     : -32px;
+    left    : 0;
+  }
+
+  div {
+    position: relative;
+
+    img {
+      display: block;
+    }
+
+    p {
+      position   : absolute;
+      left       : 90px;
+      top        : 26px;
+      width      : 230px;
+      height     : 68px;
+      display    : flex;
+      align-items: center;
+      font-size  : 16px;
+      overflow   : hidden;
+    }
+
+    .inviteClose {
+      position  : absolute;
+      right     : -12px;
+      top       : -12px;
+      display   : inline-block;
+      width     : 32px;
+      height    : 32px;
+      background: url("../../../../../resource/images/invite-preview-close.png") no-repeat;
+    }
+  }
+}

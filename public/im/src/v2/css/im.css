@@ -1,0 +1,213 @@
+body{
+    font-family: "Microsoft YaHei", 'Hiragino Sans GB', Helvetica, Arial, 'Lucida Grande', serif;
+}
+
+header{
+    position:absolute;
+    height:3em;
+    top:0;
+    width:100%;
+    z-index:999;
+}
+
+article{
+    position:absolute;
+    top:3em;
+    bottom:5.1em;
+    width:100%;
+    padding-top:0.5em;
+    overflow-y:scroll;
+    padding-bottom: 0.5em;
+}
+
+footer{
+    position: absolute;
+    height: 5.1em;
+    overflow-y: hidden;
+    bottom:0;
+    width:100%;
+}
+
+footer .sendBtn{
+    margin: 0.35em;
+    line-height: 1.9em;
+    padding: 0.17em 1em;
+    font-size: 0.8em;
+}
+
+header img.logo{
+    width:2.4em;
+    height:2.4em;
+    border-radius: 1.2em;
+    margin:0.3em;
+    float:left;
+}
+
+header address{
+    height:2.4em;
+    line-height: 1.2em;
+    margin:0.2em;
+    float:left;
+}
+
+header address span{
+    font-style: normal;
+}
+
+header address em{
+    font-style: normal;
+    font-size:0.9em;
+}
+
+header address i{
+    font-style: normal;
+    font-size:0.9em;
+}
+
+article section{
+    max-width: 80%;
+    /* margin:0.2em; */
+    margin: 0.2em 0.8em;
+    clear:both;
+    border-radius: 3px;
+    font-size: 13px;
+    position: relative;
+}
+
+article section.receive:after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border: 0;
+    top: 50%;
+    margin-top: -4px;
+    transform: rotate(-45deg);
+    right: -3px;
+}
+
+article section.send:after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border: 0;
+    top: 50%;
+    margin-top: -4px;
+    transform: rotate(-45deg);
+    left: -5px;
+    border-top: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
+}
+
+article section>div{
+    /*margin: 0.6em 0.8em;*/
+    /*margin: 0.2em 0.6em;*/
+    margin: 8px 12px;
+}
+
+article section.time{
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin:0;
+}
+
+article time{
+    display:inline-block;
+    padding: 0 10px;
+    border-radius: 0.6em;
+}
+
+article section.send{
+    float: left;
+    text-align: left;
+    word-wrap: break-word;
+    -ms-word-wrap:break-word;
+    border: 1px solid #f0f0f0;
+    margin: .2em .8em .2em 1em;
+}
+
+article section.send .wiki-title {
+    display: block;
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+article section.send .wiki-message {
+    display: block;
+}
+
+/*article section.send a.wiki {*/
+    /*color: #333;*/
+    /*text-decoration: none;*/
+/*}*/
+/*article section.send a.wiki:before {*/
+    /*content: '您可能遇到下面这个问题，请点击查看：';*/
+    /*color: #333;*/
+    /*cursor: default;*/
+    /*font-size: 14px;*/
+    /*font-weight: bold;*/
+    /*display: block;*/
+    /*margin: 5px 0;*/
+/*}*/
+/*article section.send a.wiki:hover {*/
+    /*color: #00a2ca;*/
+    /*border-bottom: 1px solid #00a2ca;*/
+/*}*/
+
+article section.system{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+article section.system > span {
+    background: gray;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0 10px;
+}
+
+article section.system P {
+    color: #FFF;
+    display: inline-block;
+    background: #CCCCCC;
+    padding: 2px 10px;
+    border-radius: 11px;
+    font-size: 12px;
+}
+
+article section.receive{
+    float: right;
+    text-align: left;
+    -ms-word-wrap:break-word;
+    word-wrap:break-word;
+}
+
+article section.gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+footer nav{
+    height:2.3em;
+    line-height: 2em;
+    padding-top:0.1em;
+}
+
+footer textarea{
+    resize: none;
+    height:3.5em;
+    border-radius: 0 !important;
+    border:0 !important;
+    box-shadow: inset 0 1px 1px #ddd !important;
+    font-size: 13px;
+}

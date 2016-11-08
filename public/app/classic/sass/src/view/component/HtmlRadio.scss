@@ -1,0 +1,45 @@
+.x-field.x-form-item.x-form-item-default.x-form-type-radio .HtmlRadio{
+  border: none;
+  border-radius: 20%;
+  width:100%;
+  height:100%;
+
+  .html-radio-display{
+    border: none;
+    width:90%;
+    height:90%;
+    border-radius: 5%;
+    padding: 12%;
+    text-indent: 7px;
+    margin:1px;
+  }
+
+  .html-radio-check{
+    color:#FFF;
+    font-size: 12px;
+    display: none;
+  }
+  .x-form-radio-default{
+    background:none;
+  }
+}
+
+.x-field.x-form-item.x-form-item-default.x-form-type-radio.x-form-cb-checked .HtmlRadio{
+  .html-radio-check{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    background-color: #0aace5;
+    position: absolute;
+    right: 0;
+    top:-6px;
+  }
+  .x-form-radio-default{
+    background:none;
+  }
+  .html-radio-display{
+    border: 1px #0aace5 solid;
+    margin: 0;
+  }
+}

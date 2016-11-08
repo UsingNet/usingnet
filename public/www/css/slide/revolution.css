@@ -1,0 +1,17 @@
+.tp-banner-container{
+	z-index: 1;
+	overflow: hidden !important;
+	position: relative;
+}
+.tp-caption .btn{
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 0.9rem;
+}
+.tp-caption .btn:hover{
+	color: #fff;
+}
+.tp-caption{
+	text-shadow:0px 2px 5px rgba(0, 0, 0, 0.5);
+	z-index: 9999 !important;
+}

@@ -1,0 +1,65 @@
+<style type="text/css">
+    body, header, article{
+        background-color: #<# echo $chatWin_bg_color||"F9F9F9";#>;
+    }
+
+    textarea, footer{
+        background: #FFF;
+    }
+
+    header{
+        background-color:#<# echo $title_bg_color||"00A4F5"; #>;
+        color:#<# echo $title_txt_color||"FFF"; #>;
+    }
+    header a{
+        background-color:#<# echo $title_bg_color||"00A4F5"; #> !important;
+        color:#<# echo $title_txt_color||"FFF"; #> !important;
+    }
+    time{
+        color:#FFF;
+        background-color: #CCC;
+        font-size:0.9em;
+    }
+    section.send{
+        color:#<# echo $message_left_font_color||"000"; #>;
+        background-color: #<# echo $message_left_bg_color||"FFF"; #>;
+    }
+    section.send a{
+        color:#<# echo $message_left_font_color||"000"; #>;
+    }
+    article section.send:after{
+        background-color: #<# echo $message_left_bg_color||"FFF"; #>;
+    }
+    section.receive{
+        color:#<# echo $message_right_font_color||"FFF"; #>;
+        background-color: #<# echo $message_right_bg_color||"00A4F5"; #>;
+    }
+    section.receive a{
+        color:#<# echo $message_right_font_color||"FFF"; #>;
+    }
+    article section.receive:after{
+        background-color: #<# echo $message_right_bg_color||"EEE"; #>;
+    }
+    footer a{
+        background-color:#<# echo $button_bg_color||"00A4F5"; #> !important;
+        color:#<# echo $button_txt_color||"FFF"; #> !important;
+    }
+    footer nav .tools-button{
+        background-color:#<# echo $chatWin_bg_color||"FFF";#> !important;
+        color:#AAA !important;
+    }
+    div.lm{
+        background-color:#<# echo $chatWin_bg_color||"F9F9F9";#> !important;
+    }
+    div.lm form input[type=button],div.lm form button{
+        background-color:#<# echo $button_bg_color||"00A4F5"; #> !important;
+        color:#<# echo $button_txt_color||"FFF"; #> !important;
+    }
+    dialog{
+        border-top: 5px solid #<# echo $title_bg_color||"00A4F5"; #>;
+    }
+    .evaluation-submit {
+        background-color:#<# echo $title_bg_color||"00A4F5"; #>;
+        color:#<# echo $title_txt_color||"FFF"; #>;
+    }
+</style>

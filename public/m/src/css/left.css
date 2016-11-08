@@ -1,0 +1,12 @@
+.order-list .badge{
+    background: red;
+    color: white;
+}
+
+#panel-left ul.order-list{
+    background-color: #222426;
+}
+
+.order-list li.selected{
+    background-color: #1c1d1f;
+}

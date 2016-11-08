@@ -1,0 +1,95 @@
+.closeOrderBtn {
+    float: right;
+    margin-right: 16px;
+    color: #ADB3B8;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.messages {
+    .time {
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #999;
+        text-align: right;
+    }
+    .bubble {
+        background-color: #f0f1f3;
+        border-radius: 3px;
+        border: 2px dashed transparent;
+        padding: 5px;
+        font-size: 13px;
+        line-height: 21px;
+        word-wrap: break-word;
+        word-break: break-all;
+        max-width: 80%;
+        float: right;
+    }
+    .message {
+        color: #323c38;
+    }
+    pre {
+        margin: 0;
+    }
+}
+
+.messages.remote {
+    .time {
+        text-align: left;
+    }
+    .bubble {
+        float: left;
+        background-color: #ebf4fd;
+    }
+}
+
+.historybanner {
+    cursor: pointer;
+    color: #35BAF6;
+    text-align: center;
+}
+
+.bubble {
+    .message {
+        img {
+            max-width: 100%;
+        }
+
+
+        .wiki-title {
+            display: block;
+            font-weight: bold;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        .wiki-message {
+            display: block;
+        }
+
+
+        /*a.wiki {
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+                color: #00a2ca;
+                border-bottom: 1px solid #00a2ca;
+            }
+
+            &:before {
+                content: '您可能遇到下面这个问题，请点击查看：';
+                color: #333;
+                cursor: default;
+                font-size: 14px;
+                font-weight: bold;
+                display: block;
+                margin: 5px 0;
+            }
+        }*/
+
+    }
+}
+
+.fastReply-menu span.x-menu-item-text {
+    display: block !important;
+}

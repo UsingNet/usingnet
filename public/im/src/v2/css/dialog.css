@@ -1,0 +1,25 @@
+dialog {
+    top: 28%;
+    min-width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 1em;
+
+    z-index: 99999;
+}
+
+dialog h4{
+    height: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+dialog article{
+    display: block;
+}

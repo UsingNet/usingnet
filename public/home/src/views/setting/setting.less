@@ -1,0 +1,274 @@
+#setting {
+  height: 100%;
+
+  .setting-menus {
+      overflow-y: auto;
+      overflow-x: hidden;
+  }
+
+  .ant-layout-sider {
+    width  : 174px;
+    height : 100%;
+    padding: 24px 0;
+  }
+
+  .ant-layout-container {
+    background: #fff;
+    margin    : 0;
+    position  : relative;
+    height    : 100%;
+  }
+
+  .ant-layout-content {
+    position     : absolute;
+    top          : 24px;
+    width        : 100%;
+    bottom       : 24px;
+    padding-left : 200px;
+    padding-right: 24px;
+    overflow     : hidden;
+  }
+
+  .sites {
+    height: 100%;
+
+    .submit {
+      button {
+        margin-right: 10px;
+      }
+    }
+
+    .ant-tabs-content {
+      position: absolute;
+      width   : 100%;
+      top     : 36px;
+      bottom  : 0;
+
+      > div {
+        height: 100%;
+      }
+    }
+
+    .ant-tabs-bar {
+      margin-bottom: 0;
+      position     : relative;
+      z-index      : 100;
+    }
+
+    .ant-tabs {
+      height        : 100%;
+      display       : flex;
+      flex-direction: column;
+    }
+
+    .ant-tabs-tabpane {
+      height  : 100%;
+      overflow: auto;
+    }
+
+    .form-wapper {
+      height    : 100%;
+      position  : relative;
+      box-sizing: border-box;
+      padding   : 20px 0;
+
+      .ant-form-horizontal {
+        width : 70%;
+        height: 100%;
+      }
+
+      .preview {
+        position: absolute;
+        top     : 20px;
+        right   : 20px;
+      }
+    }
+  }
+
+  .wechats,
+  .weibos {
+    overflow: hidden;
+
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .action {
+      margin-bottom: 20px;
+    }
+
+    .ant-card-body {
+      height : 100%;
+      padding: 15px;
+    }
+
+    .add {
+      a,
+      span {
+        display   : block;
+        text-align: center;
+        height    : 100%;
+        cursor    : pointer;
+
+        i {
+          margin-top: 48px;
+          font-size : 54px;
+          color     : #858585;
+          opacity   : 0.4;
+        }
+
+        &:hover {
+          i {
+            color: #57c5f7;
+          }
+        }
+      }
+    }
+
+    .ant-card {
+      width        : 300px;
+      display      : inline-block;
+      margin-right : 20px;
+      margin-bottom: 20px;
+      overflow     : hidden;
+      height       : 180px;
+
+      .body {
+        overflow: hidden;
+
+        .hd {
+          overflow      : hidden;
+          border-bottom : 1px solid #DDD;
+          padding-bottom: 8px;
+          margin-bottom : 8px;
+
+          h4 {
+            float: left;
+            width: 180px;
+          }
+
+          .ant-tag {
+            float: right;
+          }
+        }
+
+        .img {
+          float       : left;
+          margin-right: 15px;
+          display     : inline-block;
+
+          img {
+            width: 80px;
+          }
+        }
+
+        .action {
+          position  : absolute;
+          bottom    : 0;
+          right     : 20px;
+          opacity   : 1;
+          transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+          i {
+            margin-left: 10px;
+            cursor     : pointer;
+          }
+        }
+      }
+
+      &:hover {
+        .action {
+          opacity: 1;
+        }
+      }
+    }
+
+    .desc {
+      line-height: 2;
+      margin-top : 50px;
+
+      ul {
+        list-style-type: disc;
+        padding-left   : 50px;
+        font-size      : 12px;
+        color          : #888;
+      }
+    }
+  }
+
+  .voip {
+    .header {
+      margin-bottom: 50px;
+    }
+
+    .checking,
+    .init {
+      width     : 400px;
+      text-align: center;
+
+      .tips {
+        font-size : 12px;
+        margin-top: 50px;
+        color     : #888;
+        text-align: left;
+      }
+    }
+
+    .success {
+      width: 800px;
+
+      .edit {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.email-form {
+  .ant-input-number {
+    width: 100%;
+  }
+
+  .ant-form-item {
+    label {
+      width    : auto;
+      min-width: 8.33333333%;
+    }
+  }
+}
+
+.setting-weibo-tips {
+  width        : 400px;
+  margin       : 0 auto;
+  background   : #f3f3f3;
+  border-radius: 10px;
+  padding      : 20px;
+  line-height  : 2;
+
+  ul {
+    list-style-type: decimal;
+  }
+}
+
+.auth-confirm {
+  margin-top: 10px;
+  text-align: center;
+
+  button {
+    margin: 0 10%;
+  }
+}
+
+.permission {
+    .help {
+        margin: 7px 0 20px;
+    }
+
+    .ant-checkbox-wrapper {
+        font-size: 14px;
+    }
+
+    .submit {
+        margin-top: 20px;
+    }
+}

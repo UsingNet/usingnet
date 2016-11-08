@@ -1,0 +1,178 @@
+@import './uaIcon-sprite.less';
+
+.ant-dropdown {
+  .ant-dropdown-menu-item:first-child {
+    border-radius: 0;
+  }
+}
+
+body {
+  font-size: 14px;
+}
+
+.table-operation-region {
+  // 规定表格顶部操作列的样式
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  & > * {
+    margin: 0 0 10px 5px;
+  }
+}
+
+.tableAction {
+  // 规定表格行内操作列的样式
+  button {
+    border: none;
+  }
+}
+
+.vertical-center-modal {
+  // 对话框垂直居中
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ant-modal {
+    top: 0;
+  }
+}
+
+.ant-table-fixed-header .ant-table-header {
+  // 修复表格header的样式bug
+  overflow-y: hidden;
+}
+
+.ant-dropdown-menu.ant-dropdown-menu-vertical.ant-dropdown-menu-root {
+  // 规定表格筛选下拉浮层的高度
+  max-height: 500px;
+  overflow: auto;
+}
+
+.pay-style-button {
+  // 自定义按钮样式
+  background: #f60 !important;
+  color: #fff !important;
+  border-color: #f60 !important;
+}
+
+.hide-form-colon {
+  // 添加在FormItem的className,用于使该item的label不可见
+  label {
+    visibility: hidden;
+  }
+}
+
+.anticon-wechat {
+  &:before {
+    display: block;
+    font-family: 'FontAwesome' !important;
+    content: '\f1d7';
+  }
+}
+
+.user-agent-info {
+  // userAgent解析显示的图标
+  .devices {
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+
+    i {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .bot {
+      .sprite(@bot);
+    }
+
+    .desktop {
+      .sprite(@desktop);
+    }
+
+    .mobile {
+      .sprite(@mobile);
+    }
+
+    .chrome,
+    .chromium,
+    .google.browser {
+      .sprite(@chrome);
+    }
+
+    .maxthon {
+      .sprite(@maxthon);
+    }
+
+    .qq.browser {
+      .sprite(@qqbrowser);
+    }
+
+    .sogou.explorer {
+      .sprite(@sogou);
+    }
+
+    .miui.browser {
+      .sprite(@miui);
+    }
+
+    .ios,
+    .mac.os.x {
+      .sprite(@ios);
+    }
+
+    .baiduboxapp {
+      .sprite(@baiduboxapp);
+    }
+
+    .qt {
+      .sprite(@qt);
+    }
+
+    .wechat {
+      .sprite(@wechat);
+    }
+
+    .firefox {
+      .sprite(@firefox);
+    }
+
+    .internet.explorer {
+      .sprite(@ie);
+    }
+
+    .android {
+      .sprite(@android);
+    }
+
+    .linux,
+    .ubuntu {
+      .sprite(@linux);
+    }
+
+    .opera {
+      .sprite(@opera);
+    }
+
+    .safari {
+      .sprite(@safari);
+    }
+
+    .windows {
+      .sprite(@windows);
+    }
+
+    .browser.uc {
+      .sprite(@uc);
+    }
+  }
+}
+
+.mail-modal {
+  p {
+    font-size: 15px;
+    margin: 5px 0 10px;
+  }
+}

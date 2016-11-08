@@ -1,0 +1,79 @@
+.combohtmlradio {
+    width: 100%;
+    height: 100%;
+
+    .innerSpan {
+        width: 100%;
+        height: 100%;
+        background: none !important;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        overflow: visible;
+
+        .icon {
+            position: absolute;
+            background: #3C8DBC;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            right: -10px;
+            top: -10px;
+            display: none;
+        }
+
+        .radioHead {
+            width: 100%;
+            height: 30%;
+            background: #F8F8F8;
+            padding-top: 20px;
+            border-bottom: 1px solid #ddd;
+
+            .name {
+                margin: 0;
+                font-size: 32px;
+                font-weight: 300;
+                text-align: center;
+            }
+
+            .fitsTo {
+                font-size: 14px;
+                margin-top: 16px;
+                text-align: center;
+                color: #888;
+            }
+        }
+
+        .radioBody {
+            width: 100%;
+            height: 120px;
+            border-bottom: 1px solid #ddd;
+
+            .price {
+                line-height: 120px;
+                margin: 0;
+                text-align: center;
+                font-weight: 300;
+                font-size: 60px;
+            }
+        }
+
+        .radioFoot {
+            width: 100%;
+            height: 88px;
+            line-height: 88px;
+            text-align: center;
+        }
+    }
+}
+
+.x-form-cb-checked.x-form-dirty {
+    .innerSpan {
+        border-color: #3C8DBC;
+        .icon {
+            display: block;
+        }
+    }
+}

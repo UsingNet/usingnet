@@ -1,0 +1,71 @@
+.shape-radio {
+  .ant-upload {
+    position: absolute;
+    left    : 8px;
+  }
+
+  .ant-radio-group > label {
+    height       : 150px;
+    margin-bottom: 10px;
+  }
+
+  > label {
+    line-height: 35px;
+  }
+
+  .ant-radio {
+    .ant-radio-inner {
+      display: none !important;
+    }
+    line-height: 150px;
+
+    > span:first-child {
+      display: none !important;
+    }
+
+    span {
+      line-height: 150px;
+      display    : inline-block;
+      height     : 150px;
+      width      : 76px;
+    }
+
+    div {
+      border-radius: 5px;
+      height       : 150px;
+      width        : 76px;
+      background   : #FAFAFA;
+      display      : inline-block;
+      text-align   : center;
+      transition   : all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      button {
+        padding: 0;
+      }
+    }
+
+    &.ant-radio-checked {
+      > span > div {
+        box-shadow: 0 0 8px #2DB7F5;
+      }
+    }
+  }
+}
+
+.form-input-type {
+    margin-bottom: 15px;
+
+    .ant-select {
+        width: auto;
+        margin-right: 12px;
+    }
+}
+
+.change-item-type {
+    margin-bottom: 15px;
+
+    .ant-select {
+        margin-right: 15px;
+        width: 130px;
+    }
+}

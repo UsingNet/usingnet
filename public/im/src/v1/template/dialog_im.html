@@ -1,0 +1,40 @@
+<!-- <div class="home-menu pure-menu pure-menu-horizontal" class="siteTitle" id="siteTitle">
+    <img class="logo" src="" /><a class="pure-menu-heading title" href="javascript:void(0)">Your Site</a>
+</div> -->
+<div class="message-container">
+</div>
+<iframe id="form_submit" name="form_submit"></iframe>
+<div class="message-sender">
+    <form class="pure-form pure-g" target="form_submit" action="/api/upload" method="post" enctype="multipart/form-data" style="width: 100%; height: 100%; position: relative;">
+        <textarea class="inputArea pure-u-1" placeholder={$PLACE_HOLDER$}></textarea>
+        <span class="uploadHover"></span>
+        <input class="uploadBtn pure-button" name="file" type="file" accept="image/jpeg, image/png, image/bmp, image/gif, audio/wav" />
+        <input class="sendBtn pure-button pure-button-primary" type="button" value="发送" style="border: 1px solid #{$BTN_BG_COLOR$};" />
+        <input class="faceBtn pure-button pure-button-primary" type="button" value="" />
+        <input class="evaluateBtn pure-button pure-button-primary" type="button" value="" />
+        <input id="evaluationOrderIdValue" type="text" value="" style="display: none;" />
+    </form>
+</div>
+<style>
+    .sendBtn {
+        background-color: #{$BTN_BG_COLOR$};
+        color: #{$BTN_TEXT_COLOR$};
+    }
+    /*#siteTitle {
+        background-color: #{$TITLE_BG_COLOR$};
+    }
+    #siteTitle a {
+        color: #{$TITLE_TEXT_COLOR$};
+    }*/
+    .message.receive {
+        background-color: #{$RECEIVE_MSG_BG_COLOR$};
+        color: #{$RECEIVE_MSG_TEXT_COLOR$};
+    }
+    .message.send {
+        background-color: #{$SEND_MSG_BG_COLOR$};
+        color: #{$SEND_MSG_TEXT_COLOR$};
+    }
+    .dialog .message-container {
+        background-color: #{$CHATWIN_BG_COLOR$};
+    }
+</style>

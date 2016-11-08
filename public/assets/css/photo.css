@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#file {
+    display: none;
+}
+
+body {
+    color: #313d4b;
+    font-size: 14px;
+    font-family: arial;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #313238;
+}
+.albums {
+    padding: 20px
+}
+.albums .item {
+    margin-bottom: 30px;
+    padding-bottom:20px;
+    border-bottom: 1px dotted #eee;
+}
+h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.albums .item .img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    float: left;
+    display: inline-block;
+    position: relative;
+}
+.albums .item .img img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+}
+.albums .item .con .name{
+    margin-bottom: 10px;
+}
+.albums .item .actions {
+    margin-top: 40px;
+}
+.albums li .actions a {
+    text-align: center;
+    width: 50px;
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: #FFF;
+}
+.delete {
+    background: #cd5554;
+}
+.view {
+    background: #91684a;
+}
+.edit {
+    background: #00c07f;
+}
+.confirm {
+    background-color: #cd5554;
+}
+.cancel {
+    background-color: #00c07f;
+}
+
+.g-tips {
+    position: absolute;
+    width: 160px;
+    height: 100px;
+    background: #FFF;
+    left: 0; right: 0;
+    margin: auto;
+    z-index: 1;
+    display: none;
+}
+
+.g-tips .actions {
+    text-align: center;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}
+.g-tips .actions a {
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 26px;
+    margin: 0 5px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #FFF;
+}
+.g-tips .con {
+    text-align: center;
+    padding-top: 30px;
+    text-align: center;
+}
+.g-layer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+.btn {
+    display: block;
+    font-size: 14px;;
+    padding-top: 10px;
+    color: #FFF;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #00c07f;
+    text-decoration: none;
+}
+.create {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+.modal {
+    display: none;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #FFF;
+    z-index: 2;
+}
+.modal .back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+.modal .back a {
+    color: #888;
+}
+.modal .back img {
+    width: 13px;
+    position: relative;
+    top: -1px;
+    transform: rotateZ(90deg);
+}
+
+.modal .step > .title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.modal .group {
+    margin-bottom: 20px;
+    position: relative;
+}
+.modal label {
+    display: block;
+    margin-bottom: 5px;
+}
+.modal input, .modal textarea {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+}
+.modal textarea {
+    resize: none;
+    height: 80px;
+}
+.modal .select {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    position: relative;
+    padding-left: 10px;
+}
+.submit {
+    margin-top: 30%;
+}
+.select:after {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    position: absolute;
+    right: 10px;
+    width: 0;
+}
+.select:after {
+    border-width: 8px;
+    border-top-color: #ddd;
+    top: 10px;
+}
+.sub {
+    padding: 8px;
+    padding-bottom: 0;
+    display: none;
+    background: #FFF;
+    top: 2px;
+    border: 1px solid #ddd;
+    border-top: none;
+    position: absolute;
+    width: 100%;
+    top: 28px;
+    font-size: 13px;
+    line-height: 3;
+}
+.sub li {
+    border-bottom: 1px solid #EEE;
+}
+
+div.next {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    padding: 10px
+}
+
+.step-wrap {
+    height: 100%;
+}
+.step-1 {
+    padding: 20px;
+}
+.step-2 {
+    display: none;
+    height: 100%;
+}
+
+.step-2 .choose {
+    position: absolute;
+    width: 120px;
+    height: 140px;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.step-2 .choose img {
+    width: 60px;
+    height: 60px;
+    opacity: .8;
+}
+
+.step-2 .actions {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    left: 0;
+}
+.step-2 .photos {
+    width: 90%;
+    margin: 0 auto;
+}
+.step-2 .photos .item {
+    display: block;
+    float: left;
+    width: 28%;
+    margin: 2%;
+    position: relative;
+    margin-bottom: 10px;
+    background: #fafafa;
+}
+.step-2 .photos .item .close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 30px;
+    background: #cd5554;
+    color: #FFF;
+}
+.step-2 .photos li img {
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.step-2 .desc {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 120px;
+    text-align: center;
+    margin: auto;
+}
+
+.step-2 .tips {
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    bottom: 180px;
+    text-align: center;
+    margin: auto;
+    color: #DD4A68;
+}
+
+.step-3 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-3 .tips {
+    position: absolute;
+}
+
+.step-3 .photos {
+    width: 80%;
+    background: #fafafa;
+    position: absolute;
+    top: 70px; right: 0; bottom: 120px; left:0;
+    margin: auto;
+}
+.step-3 .nav {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url(/assets/img/arrow.png);
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 999;
+    display: block;
+}
+.step-3 .prev {
+    left: -30px;
+    transform: rotateZ(90deg);
+}
+.step-3 .next {
+    right: -30px;
+    transform: rotateZ(-90deg);
+}
+
+.step-3 .photos .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.page .close {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    color: #f06966;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.step-3 .tips {
+    position: absolute;
+    bottom: 60px;
+    text-align: center;
+    width: 100%;
+    color: #cd5554;
+    display: none;
+}
+
+.step-3 .actions {
+    position: absolute;
+    left: 0; right: 0;
+    margin: auto;
+    width: 90%;
+    height: 70px;
+    line-height: 70px;
+    bottom: 0px;
+    text-align: center;
+}
+.step-3 .actions a {
+    display: inline-block;
+    margin: 0 10px
+}
+.step-3 .actions .preview {
+    position: absolute;
+    right: 0;
+}
+
+.step-3 .action-bar {
+    display: none;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    bottom: 0px;
+    background: rgba(0, 0, 0, .5);
+    font-size: 12px;
+}
+.step-3 .action-bar .close {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-size: 25px;
+    color: #FFF;
+}
+.step-3 .focus {
+    border: 1px solid #DD4A68 !important;
+    padding: 2px;
+}
+.step-3 .style ul {
+    height: 100%;
+}
+.step-3 .add {
+    display: none;
+    text-align: center;
+}
+.step-3 .add .add-type {
+    padding: 10px;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    color: #FFF;
+}
+.step-3 .add-type i {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.step-3 .style li {
+    display: inline-block;
+    text-align: center;
+    height: 70px;
+    margin: 5px;
+}
+.step-3 .style img {
+    height: 100%;
+}
+
+.step-3 .paginate {
+    position: absolute;
+    text-align: center;
+    bottom: 90px;
+    width: 100%;
+    color: #555;
+}
+.step-3 .paginate li {
+    font-size: 12px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #FFF;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #CCC;
+}
+.step-3 .paginate li.current {
+    background: #f06966;
+    color: #FFF;
+}
+
+/*--------------------- Style Start --------------*/
+.style-1 {
+    font-size: 12px;
+}
+.style-1 .img {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    bottom: 80px;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.style-1 .img img {
+    width: 100%;
+}
+
+.style-1 .title {
+    position: absolute;
+    top: 30px;
+    left: 0; right: 0;
+    margin: auto;
+    padding: 2px;
+    border: 1px solid transparent;
+}
+.style-1 .desc {
+    position: absolute;
+    bottom: 40px;
+    left: 0; right: 0;
+    margin: auto;
+    padding: 2px;
+    border: 1px solid transparent;
+}
+.style-2 {
+    font-size: 12px;
+}
+.style-2 .img {
+    width: 100%;
+    bottom: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.style-2 .img img {
+    height: 100%;
+}
+.style-2 .title {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    padding: 2px;
+    border: 1px solid transparent;
+}
+.style-2 .desc {
+    padding: 2px;
+    border: 1px solid transparent;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+}
+/*--------------------- Style End --------------*/
+
+
+

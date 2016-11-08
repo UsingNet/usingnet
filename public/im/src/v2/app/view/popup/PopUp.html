@@ -1,0 +1,75 @@
+<# if(($web['icon_shape'] == 'none' || $web['icon_shape'] == 'custom') && $web['customer_icon']){ #>
+    <div id="__USINGNET_HOLDER" style="cursor: pointer;"><img src="<# echo $web['customer_icon']; #>" alt="<# echo ($online || $web['type'] == 'IM') ? '在线客服' : '客服留言'; #>" /></div>
+<# }else{ #>
+    <# switch($web['icon_shape']){ case 'bar': #>
+        <div id="__USINGNET_HOLDER" style="cursor: pointer;box-shadow: rgba(0, 0, 0, 0.498039) 0 5px 10px;background: #<# echo $web['title_bg_color']||"00A4F5"; #>; width:35px; height:140px;border-radius: 17px; padding-top: 17px;">
+            <img style="width:22px; height:20px; margin-left: 7px;" src="//im.usingnet.net/build/v2/image/message.png">
+            <p style="line-height: 20px; padding: 0 11px;text-indent: 0;margin-top: 6px;font-size: 13px; color:#FFF;"><# echo ($online || $web['type'] == 'IM') ?'在线客服':'客服留言'; #></p>
+        </div>
+        <# break; case 'square': #>
+        <div id="__USINGNET_HOLDER" style="cursor: pointer;box-shadow: rgba(0, 0, 0, 0.498039) 0 5px 10px;background: #<# echo $web['title_bg_color']||"00A4F5"; #>; width:58px; height:60px; ">
+            <img style="width:22px;height:20px;display: inline;margin: 10px 0 0 17px;" src="//im.usingnet.net/build/v2/image/message.png">
+            <p style="line-height: 20px; padding: 3px;text-indent: 2px;margin: 3px 0 0 0; font-size: 12px; color:#FFF;"><# echo ($online || $web['type'] == 'IM') ? '在线客服':'客服留言'; #></p>
+        </div>
+        <# break;  case 'circular':default: #>
+        <div id="__USINGNET_HOLDER" style="cursor: pointer;box-shadow: rgba(0, 0, 0, 0.498039) 0 5px 10px;background: #<# echo $web['title_bg_color']||"00A4F5"; #>; width:60px; height:60px; border-radius: 30px;">
+            <img style="width:22px;height:20px; display:inline;margin: 10px 0 0 17px;" src="//im.usingnet.net/build/v2/image/message.png">
+            <p style="line-height: 20px; margin-top: 2px;text-indent: 6px; font-size: 12px; color:#FFF;"><# echo ($online || $web['type'] == 'IM')  ?'在线客服':'客服留言'; #></p>
+        </div>
+        <# break;} #>
+<# } #>
+<div class="usingnetUnreadMessageRemind" style="display: none; width: 24px; height: 24px; border-radius: 50%; background: #FF4949; position: absolute; left: -12px; top: -12px; text-align: center; line-height: 24px; font-size: 14px; color: #fff;"></div>
+<iframe src="about:blank" style="border: 0;"></iframe>
+<div class="__youxinCopyright" style="border-top: 1px solid #EDEDED; display: none; color: rgb(203, 203, 203); text-align: center; line-height: 24px; height: 24px; background: rgb(244, 244, 244);">
+    <img src="//im.usingnet.net/build/v2/image/youxinlogo.png" style="height: 17px; display: inline-block; vertical-align: middle; -webkit-filter: grayscale(100%);">
+    <span style="display: inline-block; font-size: 12px;">客服软件由<a style="font-family: monospace; font-weight: bold; color: #C9C9C9;" target="_blank" href="http://www.usingnet.com">Usingnet</a>提供</span>
+</div>
+<style>
+    #usingnet_invite_container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999999999;
+        pointer-events: none;
+    }
+    #usingnet_invite_container > div {
+        position: relative;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    #usingnet_invite_container p {
+        position: absolute;
+        left: 90px;
+        top: 28px;
+        width: 230px;
+        height: 68px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 16px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        line-height: 32px;
+        color: #666;
+    }
+
+    #usingnet_invite_container .inviteClose {
+        position: absolute;
+        right: -8px;
+        top: -8px;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url("//im.usingnet.net/build/v2/image/invite-preview-close.png") no-repeat;
+        cursor: pointer;
+    }
+</style>

@@ -1,0 +1,19 @@
+.LeaveMessage{
+  .bubble{
+    background-image:url('./images/messages/lm.png');
+    background-size: 21px 21px;
+    background-repeat: no-repeat;
+
+    padding-right:22px;
+    background-position: bottom right;
+  }
+}
+
+.LeaveMessage.remote {
+  .bubble {
+    padding-right: 5px;
+    padding-left: 22px;
+    background-position: bottom left;
+  }
+}
+

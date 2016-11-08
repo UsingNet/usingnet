@@ -1,0 +1,83 @@
+.close-evaluation-icon {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    background: url('../image/close.png') no-repeat center center;
+    width: 30px;
+    height: 30px;
+    top: -8px;
+}
+
+.evaluation-header {
+    text-align: center;
+    position: relative;
+    margin: 10px auto;
+    color: #666;
+}
+
+.evaluation-submit {
+    border: 0;
+    color: #fff;
+    margin-top: 10px;
+    width: 300px;
+    padding: 5px;
+}
+
+.evaluation-close {
+    border: 0;
+    background: green;
+    color: #fff;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.evaluation-body {
+    text-align: center;
+}
+
+.evaluation-body textarea {
+    width: 90%;
+    _width: expression(eval(document.documentElement.clientWidth - 30));
+    height: 80px;
+    margin-top: 10px;
+}
+
+.evaluation-btn {
+    text-align: center;
+    margin: 10px auto;
+    width: 220px;
+    _width: 220px;
+    color: #666;
+}
+
+.evaluation-btn div {
+    float: left;
+    width: 60px;
+    height: 70px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.icon-good {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    background: url('../image/good.png') no-repeat center center;
+}
+
+.icon-general {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    background: url('../image/normal.png') no-repeat center center;
+}
+
+.icon-bad {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    background: url('../image/bad.png') no-repeat center center;
+}

@@ -1,0 +1,115 @@
+
+.evaluation-header {
+    margin: 10px auto;
+}
+.evaluation-header div {
+    text-align: center;
+    color: #666;
+}
+
+
+.icon {
+    background-size: 44px auto;
+    background-repeat: no-repeat;
+}
+
+.icon-close {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-position: 0 -132px;
+}
+
+.evaluation-hide {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.evaluation-btn {
+    margin: 0 auto 10px;
+    width: 210px;
+}
+
+.evaluation-btn div {
+    float: left;
+    width: 60px;
+    height: 70px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.evaluation-btn div:hover {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+
+.evaluation-select {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+
+.evaluation-btn i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+}
+
+.evaluation-btn span {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.evaluation-btn:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.evaluation-body {
+    margin: 10px 15px 0;
+}
+
+
+.evaluation-body textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    resize: none;
+    border: 1px solid #ededed;
+    background-color: white;
+}
+
+.evaluation-submit {
+    width: 100%;
+    height: 35px;
+    line-height: 32px;
+    margin-top: 10px;
+    font-size: 14px;
+    border: 0;
+    border-radius: 3px;
+}
+
+
+.icon-good {
+    background-image: url("../image/good.png");
+}
+
+.icon-general {
+    background-image: url("../image/normal.png");
+}
+
+.icon-bad {
+    background-image: url("../image/bad.png");
+}
+

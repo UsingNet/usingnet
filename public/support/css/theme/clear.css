@@ -1,0 +1,32 @@
+#nav{
+    background: #4B82C9;
+}
+
+#nav dl dt a:hover{
+    background: #3F74BE;
+}
+
+#nav dl dt.current{
+    background: #3F74BE;
+}
+
+#main-search{
+    background: #eee;
+}
+
+.article-area li a{
+    color: #2E73B8;
+}
+
+#main-track a{
+    color: #2E73B8;
+}
+
+.search-result .title a{
+    color: #2E73B8;
+}
+
+em.keyword{
+    font-style: normal;
+    color: #c00;
+}

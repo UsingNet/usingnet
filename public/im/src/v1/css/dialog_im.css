@@ -1,0 +1,163 @@
+.dialog{
+    padding:0;
+    margin:0;
+    width:100%;
+    /*height:100%;*/
+     _height:expression(eval(document.documentElement.clientHeight - 48));
+    top:48px;
+    left:0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background:#FFF;
+    position:absolute;
+}
+
+.loading:before {
+    content: "\f110" !important;
+}
+
+/*#siteTitle{
+    background:#2d3e50;
+}*/
+
+/*.dialog .logo{
+    margin:5px;
+    height:40px;
+    vertical-align: middle;
+    padding-left:10px;
+}
+
+.dialog .title{
+    width:100%;
+    height:28px;
+    font-size:20px;
+    margin:0;
+    padding-left:10px;
+    color:#FFF;
+}*/
+
+.dialog .message-container{
+    left:0;
+    width:100%;
+    top:0;
+    bottom:80px;
+    position:absolute;
+    overflow-y: auto;
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #E4E4E4;
+    _height:expression(eval(document.documentElement.clientHeight - 48 - 80));
+}
+
+.body{
+    height:100%;
+    width: 600px;
+}
+
+.dialog .message-sender{
+    position:absolute;
+    height:80px;
+    overflow: hidden;
+    bottom:0;
+    width:100%;
+}
+
+.dialog .message-sender .inputArea{
+    /*padding-right:146px;*/
+    height:46px;
+    width: 100%;
+    border: 0;
+    font-size: 13px;
+
+    /*_padding-right:46px;*/
+    _width:expression(eval(document.documentElement.clientWidth));
+}
+.dialog .uploadHover{
+    /*margin-left: -136px;*/
+    /*display: inline-block;*/
+    display: block;
+    width:40px;
+    height:28px;
+    /*line-height:56;*/
+    padding:0;
+    /*_margin-left:-50px;*/
+    /*vertical-align: middle;*/
+    background: url('../image/picture.png') no-repeat center center;
+    /*background-size:42px 40px;*/
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}
+
+.dialog .uploadBtn{
+    /*margin-left: -56px;
+    _margin-left: -90px;*/
+    width:40px;
+    height:28px;
+    filter:alpha(opacity=0.1);
+    -moz-opacity:0.01;
+    -khtml-opacity: 0.01;
+    opacity: 0.01;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}
+
+.dialog .message-sender .sendBtn{
+    margin-left: 0px;
+    width: 65px;
+    height: 26px;
+    border: 1px solid #0078e7;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    line-height: 14px;
+    font-size: 14px;
+}
+
+.dialog .message-sender .faceBtn{
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    background: url('../image/face.png') no-repeat center center;
+}
+
+.dialog .message-sender .evaluateBtn{
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    border: 0;
+    background: url('../image/evaluate.png') no-repeat center center;
+}
+
+#form_submit{
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-button {
+    width: 8px;
+    height:5px;
+}
+::-webkit-scrollbar-track {
+    background:#eee;
+    border: thin solid lightgray;
+    box-shadow: 0px 0px 3px #dfdfdf inset;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+    background:#999;
+    border: thin solid gray;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background:#7d7d7d;
+}

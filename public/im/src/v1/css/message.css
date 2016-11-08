@@ -1,0 +1,23 @@
+.message{
+    max-width: 70%;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 3px;
+    clear:both;
+    word-break: break-all;
+}
+
+.message img {
+    max-width: 100%;
+}
+
+.message.receive{
+    background-color: #00A4F5;
+    color:#FFF;
+    float: right;
+}
+
+.message.send{
+    background-color: #F3f3f3;
+    float: left;
+}

@@ -1,0 +1,22 @@
+<table class="face-table">
+    <tbody>
+    <# for($i=0;$i<8;$i++){ #>
+    <tr>
+        <# for($j=0;$j<13;$j++){ #>
+        <td data="<# echo '['+$faceListMap.qq[$i*8+$j]+']'; #>"><# echo $textToHtml('['+$faceListMap.qq[$i*8+$j]+']'); #></td>
+        <# } #>
+    </tr>
+    <# } #>
+    </tbody>
+</table>
+
+<style>
+    table.face-table td{
+        width: 27px;
+        height: 27px;
+        border: 1px solid #DDD;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+</style>

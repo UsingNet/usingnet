@@ -1,0 +1,95 @@
+body{
+    font-family: "Microsoft YaHei", 'Hiragino Sans GB', Helvetica, Arial, 'Lucida Grande', serif;
+}
+
+header{
+    position:absolute;
+    height:3em;
+    top:0;
+    width:100%;
+}
+
+article{
+    position:absolute;
+    top:3em;
+    bottom:10em;
+    width:100%;
+    padding-top:0.5em;
+}
+
+footer{
+    position: absolute;
+    height:10em;
+    bottom:0;
+    width:100%;
+}
+
+header img.logo{
+    width:2.4em;
+    height:2.4em;
+    border-radius: 1.2em;
+    margin:0.3em;
+    float:left;
+}
+
+header address{
+    height:2.4em;
+    line-height: 1.2em;
+    margin:0.2em;
+    float:left;
+}
+
+header address span{
+    font-style: normal;
+}
+
+header address em{
+    font-style: normal;
+    font-size:0.9em;
+}
+
+article section{
+    max-width: 80%;
+    margin:0.2em;
+    clear:both;
+    border-radius: 0.4em;
+}
+
+article section p{
+    margin: 0.6em 0.8em;
+}
+
+article section.time{
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin:0;
+}
+
+article time{
+    display:inline-block;
+    padding:0.15em 0.4em;
+    border-radius: 0.6em;
+}
+
+article section.send{
+    float: left;
+    text-align: left;
+}
+
+article section.receive{
+    float: right;
+    text-align: right;
+}
+
+footer nav{
+    height:2.3em;
+    line-height: 2em;
+    padding-top:0.1em;
+}
+
+footer textarea{
+    resize: none;
+    height:7.5em;
+    border-radius: 0 !important;
+}

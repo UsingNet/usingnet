@@ -1,0 +1,18 @@
+.WechatMessage{
+  .bubble{
+    background-image:url('./images/messages/iconfont-wechat.png');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+
+    padding-right:22px;
+    background-position: center right;
+  }
+}
+
+.WechatMessage.remote {
+  .bubble {
+    padding-right: 5px;
+    padding-left: 22px;
+    background-position: center left;
+  }
+}

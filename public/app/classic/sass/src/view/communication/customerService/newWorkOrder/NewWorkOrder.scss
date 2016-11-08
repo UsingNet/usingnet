@@ -1,0 +1,39 @@
+
+@include extjs-button-small-ui(
+        $ui: 'order-dropdown-green',
+        $border-radius: $button-small-line-height/2,
+        $background-color: $color-soft-green,
+        $border-color:darken($color-soft-green, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'order-dropdown-orange',
+        $border-radius: $button-small-line-height/2,
+        $background-color: $color-soft-orange,
+        $border-color:darken($color-soft-orange, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'order-dropdown-blue',
+        $border-radius: $button-small-line-height/2,
+        $background-color: $color-soft-blue,
+        $border-color:darken($color-soft-blue, 5%)
+);
+
+@include extjs-menu-ui(
+        $ui: 'soft-green',
+        $ui-background-color: $color-soft-green,
+        $ui-text-color: #FFFFFF
+);
+
+@include extjs-menu-ui(
+        $ui: 'soft-orange',
+        $ui-background-color: $color-soft-orange,
+        $ui-text-color: #FFFFFF
+);
+
+@include extjs-menu-ui(
+        $ui: 'soft-blue',
+        $ui-background-color: $color-soft-blue,
+        $ui-text-color: #FFFFFF
+);

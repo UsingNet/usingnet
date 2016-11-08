@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>优信CRM</title>
+    <link type="image/x-ico" rel="icon" href="favicon.ico">
+    <script type="text/javascript" src="resources/acc.min.js?v=0.1.2"></script>
+    <script type="text/javascript">
+    var Ext = Ext || {}; // Ext namespace won't be defined yet...
+
+    // This function is called by the Microloader after it has performed basic
+    // device detection. The results are provided in the "tags" object. You can
+    // use these tags here or even add custom tags. These can be used by platform
+    // filters in your manifest or by platformConfig expressions in your app.
+    //
+    Ext.beforeLoad = function(tags) {
+        var s = location.search, // the query string (ex "?foo=1&bar")
+            profile;
+
+        // For testing look for "?classic" or "?modern" in the URL to override
+        // device detection default.
+        //
+
+
+        if (s.match(/\bclassic\b/)) {
+            profile = 'classic';
+        } else if (s.match(/\bmodern\b/)) {
+            profile = 'modern';
+        } else {
+            //profile = tags.desktop ? 'classic' : 'modern';
+            profile = tags.phone ? 'modern' : 'classic';
+        }
+
+        profile = 'classic';
+        Ext.manifest = profile; // this name must match a build profile name
+
+        // This function is called once the manifest is available but before
+        // any data is pulled from it.
+        //
+        //return function (manifest) {
+        // peek at / modify the manifest object
+        //};
+    };
+    </script>
+    <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+    <script id="microloader" type="text/javascript" src="bootstrap.js"></script>
+    <style type="text/css">
+    .spinner {
+        margin: 300px auto;
+        width: 70px;
+        height: 70px;
+        position: relative;
+    }
+
+    .container1 > div,
+    .container2 > div,
+    .container3 > div {
+        width: 20px;
+        height: 20px;
+        background-color: #3C8DBC;
+        border-radius: 100%;
+        position: absolute;
+        -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+        animation: bouncedelay 1.2s infinite ease-in-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .spinner .spinner-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container2 {
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+
+    .container3 {
+        -webkit-transform: rotateZ(90deg);
+        transform: rotateZ(90deg);
+    }
+
+    .circle1 {
+        top: 0;
+        left: 0;
+    }
+
+    .circle2 {
+        top: 0;
+        right: 0;
+    }
+
+    .circle3 {
+        right: 0;
+        bottom: 0;
+    }
+
+    .circle4 {
+        left: 0;
+        bottom: 0;
+    }
+
+    .container2 .circle1 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+
+    .container3 .circle1 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+
+    .container1 .circle2 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+    }
+
+    .container2 .circle2 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+    }
+
+    .container3 .circle2 {
+        -webkit-animation-delay: -0.7s;
+        animation-delay: -0.7s;
+    }
+
+    .container1 .circle3 {
+        -webkit-animation-delay: -0.6s;
+        animation-delay: -0.6s;
+    }
+
+    .container2 .circle3 {
+        -webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s;
+    }
+
+    .container3 .circle3 {
+        -webkit-animation-delay: -0.4s;
+        animation-delay: -0.4s;
+    }
+
+    .container1 .circle4 {
+        -webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+    }
+
+    .container2 .circle4 {
+        -webkit-animation-delay: -0.2s;
+        animation-delay: -0.2s;
+    }
+
+    .container3 .circle4 {
+        -webkit-animation-delay: -0.1s;
+        animation-delay: -0.1s;
+    }
+
+    @-webkit-keyframes bouncedelay {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0.0)
+        }
+        40% {
+            -webkit-transform: scale(1.0)
+        }
+    }
+
+    @keyframes bouncedelay {
+        0%,
+        80%,
+        100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        40% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+
+    .version-switch-notice{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 0, 0, 0);
+        z-index: 9999999999999999999999999999999999;
+        opacity: 0.8;
+        pointer-events: none;
+    }
+
+    .version-switch-notice p {
+        text-align: center;
+        font-size: 12px;
+        line-height: 50px;
+        margin: 0;
+        color: #fff;
+        transition: font-size 1s;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="version-switch-notice">
+        <p>因产品迭代，当前版本的系统将于2016年7月12日凌晨停止使用。届时请切换到新版本继续使用。由此给您造成不便，敬请谅解。点击“去新版” ——></p>
+    </div>
+
+    <div style="height: 100%; width: 99%; position: absolute; top: 0; z-index: -100; overflow: hidden;">
+        <div class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 14px; color: #3C8DBC; margin-top: -280px; font-weight: bold; font-family: Microsoft Yahei;">加载中...</div>
+
+    </div>
+
+    <!-- 云通讯的flash容器 -->
+    <div id='flashContainer' style="position: fixed; opacity: 0.01">
+        <div id='agentSystemFlashContainer'>
+            <a href="http://www.adobe.com/go/getflashplayer" alt="Get Adobe Flash player"></a>
+        </div>
+    </div>
+    <!-- 添加隐藏的音频文件，用于新工单或者新消息提醒 -->
+    <audio id="orderRemindingAudio" preload="auto" style="display: none;">
+        <!-- <source src="resources/audio/messageRing.wav" type="audio/wav"> -->
+        <source src="resources/audio/messageRing1.wav" type="audio/wav">
+    </audio>
+    <audio id="longRemindingAudio" preload="auto" style="display: none;">
+        <source src="resources/audio/messageRing2.wav" type="audio/wav">
+    </audio>
+    <!-- 添加隐藏的音频文件，用于电话铃声响 -->
+    <audio id="phoneRingingAudio" loop preload="auto" style="display: none;">
+        <source src="resources/audio/phoneRing.mp3" type="audio/mp3">
+    </audio>
+    <script>
+    (function() {
+        setTimeout(function() {
+            var loadLists = [
+                "//www.cloopen.com/js/voip/swfobject.js",
+                "resources/voip/cloopen.js"
+            ];
+            loadLists.forEach(function(src) {
+                var script = document.createElement('script');
+                script.src = src;
+                document.body.appendChild(script);
+            });
+        }, 100);
+    })();
+
+    (function() {
+        var versionSwitchNotice = document.querySelector('.version-switch-notice p');
+        setInterval(function() {
+            versionSwitchNotice.style.fontSize = '14px';
+            setTimeout(function() {
+                versionSwitchNotice.style.fontSize = '12px';
+            }, 1000);
+        }, 600000);
+    })();
+    </script>
+</body>
+
+</html>

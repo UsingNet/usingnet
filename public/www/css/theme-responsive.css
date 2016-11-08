@@ -1,0 +1,562 @@
+@media handheld, only screen and (max-width: 1980px) {
+
+	.item-service-carousel{
+		margin: 0 0 0 3% ;
+	}
+	.services-carousel{
+		height: 385px;
+	}
+}
+
+@media handheld, only screen and (max-width: 1680px) {
+
+	.item-service-carousel{
+		margin: 0 3% 0 3% ;
+	}
+	.item-service-carousel:hover{
+		margin-top: -50px;
+	}
+}
+
+@media handheld, only screen and (max-width: 1600px) {
+
+	.item-service-carousel:hover{
+		margin-top: -38px;
+	}
+	
+}
+
+@media handheld, only screen and (max-width: 1400px) {
+	.item-service-carousel{
+		margin: 0 0 0 7% ;
+	}
+	.item-service-carousel:hover{
+		margin-top: -50px;
+	}
+	
+}
+
+/* ---------------------------------------------------------------------- */
+/*	 0.5 Version 1024px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 1024px) {
+	
+	/* Nav --------------------------------------------------------------*/
+
+	.sf-menu > li{
+		margin:0 30px 0 0;	
+	}
+
+	/*  Box Action -------------------------------------------------------*/
+
+	.box-action h2{
+		font-size: 25px;
+		line-height: 35px;
+	}
+	.box-action .button a{
+		font-size: 28px;
+	}
+
+	/* Carousel services items -------------------------------------------*/
+
+	#services .owl-prev{
+		left: 20%;
+	}
+	#services  .owl-next{
+		right: 20%;
+	}
+	.services .owl-item{
+		margin-top: 76px;
+	}
+	h1{
+		font-size: 30px;
+		line-height: 40px;	
+	}
+	h2{
+		font-size: 26px;
+		line-height: 36px;
+	}
+
+	/* Coments - Post -------------------------------------------*/
+
+	.box .name h4{
+		margin-bottom: 0;
+	}
+	.box p{
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	/* Title Heading ---------------------------------------------*/
+
+	.titles-heading h1{
+		width: 35%;
+	}
+
+	/* Feature Element ------------------------------------------*/
+	
+	.feature-element li .cirle-feature{
+		width: 65px;
+		height: 65px;		
+	}	
+}
+
+/* ---------------------------------------------------------------------- */
+/*	 0.6 Version 1000px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 1000px) {
+	
+	header{		
+		position: relative;		
+	}
+
+	/* Nav Responsive ---------------------------------------------*/
+
+	#menu{
+		display: none;	
+	}
+	.tinynav {
+		display: inline;
+		width: 30%;				
+		position:absolute;
+		top: -27px;
+		right: 20px;
+		border-radius: 0;
+		font-size: 14px;
+		padding: 5px 10px;
+		border: 1px solid #dbdbdb;
+		height: 30px;	
+	} 
+
+	/*  Box Action -------------------------------------------------------*/
+
+	.box-action .title{
+		width: 75%;
+		float: left;
+	}
+	.box-action .lead{
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: 300;
+	}
+	.box-action .button a{
+		font-size: 18px;
+	}
+	.box-action .button a{
+		text-decoration: none;
+	}
+
+	/* Title Section ------------------------------------------------------*/
+
+	.title-section{		
+		margin-top: 0;			
+	}		
+	.search{
+		position: absolute;
+		max-width: 30%;
+		right: 20px;
+		top: -45px;
+	}
+	.important-info .title h1{
+		font-size: 120px;
+		line-height: 130px;
+	}
+	aside .search{
+		position: relative;
+		max-width: 100%;
+		right: 0;
+		top: 0;
+	}
+
+	/* Carousel - Slide-Services ------------------------------------------------------*/
+
+	.animation-services iframe{	
+		height: 250px
+	}
+	#slide-services .btn{
+		margin-bottom: 30px;
+	}
+	#slide-services .container{
+		max-width: 500px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	#slide-team{
+		text-align: center;
+	}
+	#slide-team .meter{
+		text-align: left;
+	}
+
+	/* Clients ----------------------------------------------------------*/
+
+	.responsive-numbers{
+		display: block;
+	}
+	.clients .title-downloads .responsive-numbers span{
+		line-height: 70px;
+	}
+	.image-clients-downloads li{
+		margin-bottom: 10px;
+	}
+
+	/* Works ------------------------------------------------------*/
+
+	.item-work,
+	.carousel{
+		max-width: 480px;
+		margin: auto auto;
+	}
+	.item-work img{
+		width: 100%;
+	}
+
+	.portfolioContainer .col-md-3,
+	.portfolioContainer .col-md-4,
+	.portfolioContainer .col-md-2{
+		margin: 0 auto;
+		width: 100%;
+	}
+	.portfolioFilter a{
+		line-height: 50px;	
+	}
+
+	.sitemap{
+		margin-bottom: 50px;
+	}
+	
+	.arrow-comment{
+		position: absolute;		
+		top: -16px;	
+		width: 100%;
+		height: 16px;
+		left: 0;
+	}
+	.info-comment a{
+		display: none;
+	}
+	.child{
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	/* Tables Pricing --------------------------------------------------*/
+
+	.item-table{
+		max-width: 500px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+	
+	/* Item Services --------------------------------------------------*/
+	
+	.icon-section{
+		display: none;
+	}
+	.item-service{
+		text-align: center;
+		max-width: 350px;
+		margin: 0 auto 30px auto;
+	}
+	.feature-element li .col-md-7{
+		display: block;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.feature-element li .cirle-feature{
+		float: none;
+	}
+	.feature-element li .line-feature{
+		width: 80%;
+		float: right;
+	}
+	.border-right{
+		border:0;
+	}
+	.titles-heading h1{
+		width: 50%;
+	}
+
+	.boxes-info{
+		max-width: 350px;
+		margin: 0 auto 30px auto;
+	}
+
+	/* Post - Testimonials ----------------------------------------------*/
+
+	.post-testimonials h3, .box{
+		max-width: 480px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	.box .link{
+		margin-top: 5%;
+	}
+	.box .info{
+		border:0;
+		text-align: center;
+	}
+	.box .date, 
+	.box .photo{
+		max-width: 40%;
+		margin: 0 auto;
+	}
+	.box .col-md-9{
+		text-align: center;
+	}
+	.box .name h4{
+		border:0;
+	}
+
+	/* Important Info ---------------------------------------------------*/
+
+	.important-info{
+		text-align: center;
+	}
+	.important-info .btn{
+		margin-bottom: 20px;
+	}
+
+	.jBar .container{
+		max-width: 400px;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	0.7 Mobile Version 767px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 768px) {
+	
+	
+	/* Sponsors ----------------------------------------------------------*/
+
+	#sponsors .owl-prev{
+		left: 42%;
+	}
+	#sponsors  .owl-next{
+		right: 42%;
+	}
+	.sponsors h2{
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.sponsors h2 span{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	#sponsors{		
+		margin: 20px 0 80px 0;	
+	}
+	.sponsors .circle{
+		left: 45.5%;
+	}
+		
+	
+	/* Footer ----------------------------------------------------------*/
+
+	footer{
+		text-align: center;
+	}
+	.arrow_footer{
+		display: none;
+	}
+	footer .border-right{
+		border: 0;
+		border-bottom: 1px solid #333;
+		padding: 0 0 20px 0;
+		margin-bottom: 20px;
+	}
+	footer .input-group{
+		max-width: 420px;
+		margin: 0 auto;
+	}
+	footer form{
+		padding-bottom: 10px;
+	}
+	footer .social{
+		display: table;
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 20px;
+	}
+	footer .social li{
+		margin-bottom: 10px;
+	}
+	.logo-footer{
+		text-align: center;
+		float: none;
+		padding: 0;
+		margin: 0;
+	}
+	.footer-center .fa-twitter{	
+		float: none;
+		margin-right: 0;
+	}	 
+
+	.important-info .title h1{
+		font-size: 100px;
+		line-height: 110px;
+	}
+	#map{
+		display: none;
+	}
+
+	/* Tables pricing --------------------------------------------------*/
+
+	.tables-together .item-table{
+		max-width: 500px;
+		width: 100%;
+		float: none;	
+		margin: 0 auto;
+		margin-bottom: 50px;	
+	}
+	.tables-together .item-table img{
+		display: none;
+	}
+
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*	 8	 Version 600px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 600px) {
+
+	
+	/*  Box Action -------------------------------------------------------*/
+
+	.box-action{
+		display: none;
+	}
+	
+	.animation-services iframe{
+		height: 280px;
+	}
+
+	#theme-options{
+		opacity: 0;
+	}
+
+	.search{
+		display: none;
+	}
+	aside .search{
+		display: block;
+	}
+	
+	.important-info .title{
+		bottom: -30px;
+	}
+	.important-info .title h1{
+		font-size: 70px;
+		line-height: 80px;
+	}
+
+	/* Works -----------------------*/
+
+	.item-work{
+		max-width: 400px;	
+		margin: 0 auto;	
+	}
+		#works .item-work {
+		max-width: 400px;	
+		margin: 0 auto;	
+	}
+	#works .item-work:first-child{
+		margin-left: auto;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	 11 Version 480px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 480px) {
+	
+	
+	.logo img{
+		width: 40%;
+	}
+
+	/* Sponsors ----------------------------------------------------------*/
+
+	#sponsors .owl-prev{
+		left: 40%;
+	}
+	#sponsors  .owl-next{
+		right: 40%;
+	}	
+	.sponsors .circle{
+		left: 42.5%;
+	}
+	
+	/* Title Section ----------------------------------------------------------*/
+
+	.title-section {
+		text-align: center;
+	}	
+	.title-section .subtitle-section{
+		display: block;
+		height: 33px;
+		line-height: 14px;
+		left: 0;
+		margin: 20px 0 0 0;
+	}	
+	.title-section .title{
+		margin: 0;
+		border: 0;
+	}
+	.title-section .title h1 {
+		display: block;
+		padding: 0;
+	}
+	.line-title{
+		display: none;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	13 Mobile Version 320px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 320px) {
+
+	/* Sponsors ----------------------------------------------------------*/
+
+	#sponsors .owl-prev{
+		left: 37%;
+	}
+	#sponsors  .owl-next{
+		right: 37%;
+	}	
+	#sponsors li{
+		max-width: 120px;
+		margin: auto 10px;
+	}
+	#sponsors li img{
+		width: 100%;
+	}
+	.sponsors .circle{
+		left: 40%;
+	}
+
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	11 Mobile Version 240px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 240px) {
+	.logo img{
+		max-width: 30%;
+	}
+}

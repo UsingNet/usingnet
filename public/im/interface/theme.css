@@ -1,0 +1,35 @@
+header{
+    background-color:#00A4F5;
+    color:#FFF;
+}
+
+header a{
+    background-color:#00A4F5 !important;
+    color:#FFF !important;
+}
+
+time{
+    color:#FFF;
+    background-color: #CCC;
+    font-size:0.9em;
+}
+
+section.send{
+    color:#000;
+    background-color: #EEE;
+}
+
+section.receive{
+    color:#FFF;
+    background-color: #00A4F5;
+}
+
+footer a{
+    background-color:#00A4F5 !important;
+    color:#FFF !important;
+}
+
+footer nav .tools-button{
+    background-color:#FFF !important;
+    color:#AAA !important;
+}

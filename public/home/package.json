@@ -1,0 +1,59 @@
+{
+  "name": "UsingNet",
+  "version": "1.7.42",
+  "private": true,
+  "entry": {
+    "index": "./src/index.jsx"
+  },
+  "dependencies": {
+    "antd": "1.5.1",
+    "async": "^2.0.0-rc.4",
+    "classnames": "^2.2.5",
+    "config": "^1.21.0",
+    "echarts": "^3.2.1",
+    "echarts-for-react": "^1.1.2",
+    "html2canvas": "^0.5.0-beta4",
+    "immutable": "^3.8.1",
+    "modules": "^0.4.0",
+    "moment": "^2.13.0",
+    "network": "^0.2.1",
+    "rc-queue-anim": "^0.11.10",
+    "react": "15.1.0",
+    "react-cookie": "^0.4.5",
+    "react-dom": "15.1.0",
+    "react-router": "^2.4.0",
+    "reqwest": "^2.0.5",
+    "socket.io-client": "^1.4.6",
+    "socketio": "^1.0.0",
+    "ua-device": "^0.1.6",
+    "views": "^1.0.2",
+    "webpack-spritesmith": "^0.2.5"
+  },
+  "devDependencies": {
+    "atool-build": "^0.7.6",
+    "babel-eslint": "^6.0.0",
+    "babel-plugin-antd": "^0.4.0",
+    "dora": "0.3.x",
+    "dora-plugin-hmr": "^0.6.1",
+    "dora-plugin-proxy": "^0.7.0",
+    "dora-plugin-webpack": "0.6.x",
+    "es3ify-loader": "^0.2.0",
+    "eslint": "^2.12.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.4.2",
+    "eslint-plugin-react": "^5.1.1",
+    "html-webpack-plugin": "^2.21.0",
+    "pre-commit": "1.x",
+    "style-loader": "^0.13.1"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "dora -p 8001 --plugins webpack?disableNpmInstall=true,proxy,hmr",
+    "lint": "eslint --ext .js,.jsx src",
+    "build": "atool-build --hash --config ./webpack.production.config.js -o ./dist/${npm_package_version}"
+  }
+}

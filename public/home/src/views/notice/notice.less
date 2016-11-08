@@ -1,0 +1,55 @@
+.notice-content-modal {
+  .ant-modal-content {
+    padding: 20px;
+  }
+
+  .notice-content-title {
+    margin: 10px 0;
+
+    span {
+      color      : #666;
+      font-weight: bold;
+      font-size  : 14px;
+    }
+
+    i {
+      font-size     : 24px;
+      margin-right  : 10px;
+      padding       : 0 1px;
+      position      : relative;
+      top           : 5px;
+      display       : inline-block;
+      font-style    : normal;
+      vertical-align: baseline;
+      text-align    : center;
+      text-transform: none;
+      text-rendering: auto;
+      line-height   : 1;
+      color         : #2db7f5;
+
+      &:before {
+        content    : "\E637";
+        display    : block;
+        font-family: "anticon" !important;
+      }
+    }
+  }
+
+  .notice-content-body {
+    padding : 0 35px;
+    height  : 300px;
+    overflow: auto;
+  }
+}
+
+.notice-table {
+  tr {
+    td:first-child {
+      p {
+        overflow     : hidden;
+        white-space  : nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

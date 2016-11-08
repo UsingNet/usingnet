@@ -1,0 +1,27 @@
+
+
+#header {
+    text-align: center;
+    height: 120px;
+    padding: 24px 0;
+    color: #333;
+}
+
+#header .avatar img {
+    width: 50px;
+    border-radius: 50px;
+}
+
+.menu {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.menu li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+.menu a {
+    color: #ccc;
+}

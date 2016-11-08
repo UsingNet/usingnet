@@ -1,0 +1,22 @@
+.popup-function-pc .content h1{
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: -0.2em;
+}
+.popup-function-pc .content h4{
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 0;
+}
+.popup-function-pc .content p{
+    font-size: 0.8em;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 0;
+}
+.popup-function-pc .content button{
+    margin: 3em auto;
+    position: relative;
+    display: block;
+}

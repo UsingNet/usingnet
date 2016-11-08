@@ -1,0 +1,210 @@
+.combo-radio {
+  .ant-radio.disabled-combo-radio {
+    -webkit-filter: grayscale(100%);
+  }
+
+  .ant-radio {
+    margin-right: 10px;
+
+    .ant-radio-inner {
+      display: none !important;
+    }
+
+    > span:first-child {
+      display: none !important;
+    }
+
+    span {
+      display    : inline-block;
+      margin-left: 0;
+    }
+
+    div {
+      border-radius: 5px;
+      text-align   : center;
+
+      button {
+        padding: 0;
+      }
+    }
+
+    &.ant-radio-checked {
+      div.plan-card {
+        box-shadow  : 0 0 8px #2db7f5;
+        border-color: #2db7f5;
+      }
+    }
+  }
+}
+
+.plan-card {
+  overflow     : hidden;
+  margin-bottom: 20px;
+  width        : 210px;
+  height       : 300px;
+  border       : 1px #e9e9e9 solid;
+
+  .plan-card-header {
+    padding-top  : 21px;
+    height       : 95px;
+    border-bottom: 1px #ddd solid;
+    background   : #f8f8f8;
+
+    h1 {
+      font-weight: normal;
+      font-size  : 30px;
+    }
+
+    span {
+      color      : #888;
+      font-size  : 14px;
+      line-height: 30px;
+    }
+  }
+
+  .plan-card-body {
+    height     : 120px;
+    line-height: 110px;
+
+    small {
+      font-size: 14px;
+    }
+
+    span {
+      font-weight: 300;
+      font-size  : 48px;
+      font-family: 'Microsoft Yahei';
+    }
+  }
+
+  .plan-card-footer {
+    height     : 92px;
+    border-top : 1px #ddd solid;
+    background : #f8f8f8;
+    line-height: 85px;
+
+    span {
+      color    : #888;
+      font-size: 14px;
+    }
+  }
+}
+
+.total-cost {
+  line-height: 27px;
+
+  span {
+    color      : #ff5c5e;
+    font-weight: bold;
+    font-size  : x-large;
+  }
+}
+
+.current-setting {
+  height       : 100%;
+  background   : #F8F8F8;
+  border-radius: 5px;
+
+  .current-setting-header {
+    height       : 40px;
+    border-bottom: 1px solid #F9EBEB;
+
+    h1 {
+      font-size  : 14px;
+      line-height: 40px;
+      margin-left: 10px;
+    }
+  }
+
+  .current-setting-body {
+    ul li {
+      margin: 22px 10px;
+
+      button {
+        width       : 100%;
+        background  : #f60;
+        color       : #fff;
+        border-color: #f60;
+
+        &.combo-disabled-button {
+          color           : #ccc;
+          background-color: #f7f7f7;
+          border-color    : #d9d9d9;
+        }
+      }
+
+      big {
+        color      : #f60;
+        font-weight: bold;
+        font-size  : 18px;
+      }
+
+      & > span:first-child {
+        display     : inline-block;
+        width       : 60px;
+        text-align  : right;
+        margin-right: 4px;
+        font-weight : bold;
+      }
+    }
+  }
+}
+
+.combo-setting {
+  & > form {
+    width: 785px;
+    float: left;
+  }
+
+  & > div {
+    width: 205px;
+    float: right;
+  }
+}
+
+.pay-button {
+  margin-left : 10px;
+  background  : #f60 !important;
+  border-color: #f60 !important;
+  color       : #fff !important;
+}
+
+.combo-step-three-pay {
+  hr {
+    height    : 1px;
+    border    : none;
+    border-top: 1px dashed #E9E9E9;
+  }
+
+  .flex-end-center {
+    display        : flex !important;
+    align-items    : center;
+    justify-content: flex-end;
+  }
+
+  .pay-div {
+    background   : #F7F7F7;
+    padding      : 10px;
+    border-left  : 3px solid #f60;
+    margin-bottom: 10px;
+  }
+
+  .pay-from-balance {
+    & > * {
+      display     : inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.price {
+  color      : #f60;
+  font-weight: bold;
+  font-size  : 18px;
+}
+
+.current-combo-card {
+  big {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,32 @@
+
+.main-content{
+    padding-bottom: 60px;
+    border-bottom: 1px #DDD solid;
+}
+
+.main-content .title h3{
+    margin: 30px 0 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px #EEE solid;
+}
+
+.main-content .article{
+    font-size: 14px;
+}
+
+.votes{
+    height: 70px;
+    line-height:70px;
+    text-indent: 20px;
+    font-size: 14px;
+}
+
+.votes a {
+    text-indent: 0;
+    margin-left: 8px;
+}
+
+.votes a:hover{
+    background: #eee;
+}

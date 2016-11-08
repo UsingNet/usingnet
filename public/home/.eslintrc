@@ -1,0 +1,18 @@
+{
+  "extends": "eslint-config-airbnb",
+  "rules": {
+    "indent": [2, 4],
+    "react/jsx-indent-props": [2, 4],
+    "react/jsx-indent": [2, 4],
+    "no-param-reassign": ["error", { "props": false }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "./src"]
+      }
+    }
+  },
+  "parser": "babel-eslint"
+}

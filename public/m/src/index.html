@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>优信CRM</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- build:css(.) css/main.min.css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<div class="page-group">
+    <include src="pages"></include>
+</div>
+
+<!-- popup, panel 等放在这里 -->
+<include src="./app/popup/customer/basic.html"></include>
+<include src="./app/popup/customer/detail.html"></include>
+<include src="./app/popup/customer/plugin.html"></include>
+<include src="./app/popup/order/close.html"></include>
+<include src="./app/popup/function/pc.html"></include>
+
+<!-- Left Panel with Reveal effect -->
+<include src="./app/panel/left.html"></include>
+
+
+<!-- build:js(.) app/vendor.min.js -->
+<script type='text/javascript' src='../node_modules/zepto/zepto.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="./include.js"></script>
+<script type='text/javascript' src='app/msui/sm.config.js' charset='utf-8'></script>
+<script type='text/javascript' src='app/msui/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='app/msui/sm-extend.min.js' charset='utf-8'></script>
+<!-- endbuild -->
+
+<!-- build:js(.) app/main.min.js -->
+<script type="text/javascript" src="../node_modules/requirejs/require.js"></script>
+<script type="text/javascript" src="./config.js"></script>
+<script type="text/javascript">
+    requirejs.config({ baseUrl: './app'});
+    require(['main']);
+</script>
+<!-- endbuild -->
+</body>
+</html>

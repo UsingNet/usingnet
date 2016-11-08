@@ -1,0 +1,12 @@
+/vendor
+/node_modules
+/storage
+Homestead.yaml
+Homestead.json
+.env
+.idea
+.sencha
+composer.phar
+composer.lock
+deployment-config.json
+sftp-config.json

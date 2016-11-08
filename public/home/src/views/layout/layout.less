@@ -1,0 +1,196 @@
+#content,
+#view,
+.container,
+body,
+html {
+  height: 100%;
+}
+
+#sidebar {
+  width: 60px;
+  background: #393c40;
+  text-align: center;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  .logo {
+    width: 40px;
+  }
+
+  .menu {
+    margin-top: 30px;
+
+    li {
+      line-height: 4;
+
+      &:hover {
+        background: #1f282c;
+      }
+
+      &.current {
+        background: #1f282c;
+      }
+    }
+
+    a {
+      display: block;
+    }
+
+    i {
+      color: #EEE;
+      font-size: 25px;
+      vertical-align: middle;
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    left: 0;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+#main {
+  position: relative;
+  background-color: #fff;
+  margin-left: 60px;
+  height: 100%;
+
+  .header {
+    .header-box {
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .nav-bar {
+      font-size: 18px;
+      padding-left: 10px;
+      display: inline-block;
+    }
+
+    .action-bar {
+      width: 190px;
+      text-align: right;
+      float: right;
+      margin-right: 20px;
+
+      .voip-status {
+        position: relative;
+        display: inline-block;
+        padding: 0 18px;
+        cursor: pointer;
+
+        span {
+          font-size: 11px;
+          padding-left: 7px;
+        }
+
+        .dot {
+          position: absolute;
+          display: inline-block;
+          top: 17px;
+          left: 27px;
+          width: 8px;
+          height: 8px;
+          border-radius: 8px;
+          background: #f50;
+        }
+      }
+
+      .status {
+        font-size: 12px;
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+
+        .dot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 8px;
+          background: #46be8a;
+          margin-right: 3px;
+        }
+      }
+
+      .offline {
+        color: #ccc;
+
+        .dot {
+          background: #ccc;
+        }
+      }
+
+      .voip {
+        border: 1px solid #ddd;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 30px;
+        text-align: center;
+        color: #ccc;
+        cursor: pointer;
+      }
+
+      .user {
+        display: inline-block;
+        margin-right: 15px;
+        margin-left: 15px;
+
+        a {
+          display: block;
+        }
+
+        .avatar {
+          vertical-align: middle;
+          width: 35px;
+          border-radius: 35px;
+        }
+      }
+    }
+  }
+
+  .content-wapper {
+    // background: #ECECEC;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    bottom: 0;
+    overflow: hidden;
+    // voip flash 容器
+    #flash {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -150px;
+      margin-left: -90px;
+    }
+
+    .window-timeout {
+      margin: 20px;
+    }
+  }
+}
+
+.to-nest-im {
+  display: block;
+  width: 100%;
+}
+
+.version {
+  margin-top: 7px;
+  font-size: 12px;
+}
+
+.__usingnetClassNameForCustom {
+  display: none;
+}

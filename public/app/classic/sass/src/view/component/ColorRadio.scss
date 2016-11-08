@@ -1,0 +1,33 @@
+.x-field.x-form-item.x-form-item-default.x-form-type-radio .ColorRadio{
+  border: none;
+  border-radius: 20%;
+  width:100%;
+  height:100%;
+
+  .color-radio-display{
+    border: none;
+    width:90%;
+    height:90%;
+    border-radius: 5%;
+    padding: 12%;
+    text-indent: 7px;
+  }
+
+  .color-radio-check{
+    color:#FFF;
+    font-size: 28px;
+    display: none;
+  }
+  .x-form-radio-default{
+    background:none;
+  }
+}
+
+.x-field.x-form-item.x-form-item-default.x-form-type-radio.x-form-cb-checked .ColorRadio{
+  .color-radio-check{
+    display: inline-block;
+  }
+  .x-form-radio-default{
+    background:none;
+  }
+}

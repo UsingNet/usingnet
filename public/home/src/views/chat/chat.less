@@ -1,0 +1,849 @@
+@import '../../less/mixins.less';
+
+#chat {
+  height: 100%;
+  width: 100%;
+  background: #f7f7f7;
+  position: absolute;
+  min-width: 1020px;
+
+  .chat-wapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .empty-box {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+    color: #aaa;
+
+    i {
+      font-size: 50px;
+    }
+  }
+
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    z-index: 1000;
+    width: 260px;
+    border-right: 1px solid #EEE;
+    background: #FFF;
+
+    h4 {
+      font-weight: normal;
+      width: 260px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      border-bottom: 1px solid #EEE;
+      overflow: hidden;
+
+      .order-num {
+        float: right;
+        color: #888;
+      }
+    }
+
+    .order-list {
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      .order-item {
+        a {
+          width: 260px;
+          margin: 0;
+          padding: 20px;
+          display: block;
+          overflow: hidden;
+
+          &:hover {
+            background: #f8f8f8;
+          }
+
+          &.current {
+            background: #eee;
+          }
+        }
+
+        .img {
+          float: left;
+          margin-right: 10px;
+
+          img {
+            width: 40px;
+            border-radius: 40px;
+          }
+        }
+
+        .info {
+          .name {
+            display: inline-block;
+            width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .date {
+            float: right;
+            color: #AAA;
+          }
+        }
+      }
+    }
+  }
+
+  .main-tab {
+    position: absolute;
+    padding-left: 260px;
+    padding-right: 380px;
+    height: 100%;
+    width: 100%;
+    .information {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      width: 380px;
+      bottom: 0;
+      background: #f8f8f8;
+      z-index: 2;
+
+      label {
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      .plan-expired {
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .info-item {
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        h4 {
+          font-weight: normal;
+          color: #222;
+        }
+
+        .ant-form-item {
+          margin-bottom: 8px;
+        }
+
+        .default {
+          border-color: #f8f8f8;
+          background: #f8f8f8;
+        }
+
+        .hover {
+          background: #f8f8f8;
+          border-color: #ddd;
+        }
+
+        input:focus {
+          box-shadow: none;
+        }
+
+        .ant-input-wrapper {
+          input {
+            &:hover {
+              background: #f8f8f8;
+              border-color: #ddd;
+            }
+
+            &:focus {
+              box-shadow: none;
+              border: 1px solid #2db7f5;
+              background: #FFF;
+            }
+          }
+        }
+      }
+
+      .plugin {
+        border: none;
+        width: 100%;
+        min-height: 100%;
+      }
+
+      .ant-tabs {
+        height: 100%;
+
+        .ant-tabs-content {
+          position: absolute;
+          top: 45px;
+          bottom: 0;
+          overflow-y: auto;
+          overflow-x: hidden;
+
+          > div {
+            height: 100%;
+          }
+        }
+
+        .ant-tabs-tabpane {
+          height: 100%;
+
+          &:last-child {
+            overflow: hidden;
+          }
+
+          &:first-child {
+            overflow: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .chat-box {
+    position: relative;
+    height: 100%;
+    background: #FFF;
+
+    .message-box {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 170px;
+
+      .message-header {
+        border-bottom: 1px solid #eee;
+        position: relative;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 20px;
+
+        .contact-name,
+        .typing {
+          float: left;
+          margin-right: 10px;
+        }
+
+        .typing {
+          display: none;
+          font-size: 12px;
+          color: #aaa;
+        }
+
+        .writing {
+          font-size: 12px;
+        }
+
+        .action-bar {
+          width: 200px;
+          float: right;
+          text-align: right;
+
+          .transfer {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+          }
+
+          .agent-list {
+            font-size: 14px;
+            line-height: 2;
+          }
+
+          .close {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .message-body {
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        bottom: 200px;
+      }
+      .messagesMixin();
+      // .messages {
+      //     padding: 10px 30px;
+      //     overflow-x: hidden;
+      //     overflow-y: auto;
+      //     height: 100%;
+      //     width: 100%;
+      //     img {
+      //         max-height: 500px;
+      //         max-width: 100%;
+      //     }
+      //     .more-message {
+      //         height: 20px;
+      //         text-align: center;
+      //         color: #2db7f5;
+      //         cursor: pointer;
+      //     }
+      //
+      //     .message-item {
+      //         width: 100%;
+      //         word-wrap: break-word;
+      //         margin-bottom: 20px;
+      //         clear: both;
+      //         a {
+      //             color: white;
+      //         }
+      //         .date {
+      //             font-size: 12px;
+      //             display: inline-block;
+      //             color: #ccc;
+      //         }
+      //         &.receive {
+      //             .bd {
+      //                 max-width: 70%;
+      //                 color: #FFF;
+      //                 background: #7ed589;
+      //                 display: inline-block;
+      //                 border-radius: 3px;
+      //                 padding: 3px 5px;
+      //             }
+      //             .date {
+      //                 margin-left: 8px;
+      //             }
+      //         }
+      //         &.send {
+      //             float: right;
+      //             position: relative;
+      //
+      //             .hd {
+      //                 max-width: 70%;
+      //                 text-align: right;
+      //             }
+      //
+      //             .date {
+      //                 font-size: 12px;
+      //                 margin-right: 8px;
+      //             }
+      //
+      //             .bd {
+      //                 float: right;
+      //                 text-align: left;
+      //                 color: #fff;
+      //                 background: #77c4f1;
+      //                 border-radius: 3px;
+      //                 padding: 3px 5px;
+      //                 display: inline-block;
+      //             }
+      //             .undo {
+      //                 background: #ccc;
+      //             }
+      //         }
+      //         &.system {
+      //             text-align: center;
+      //             color: #CCC;
+      //             margin: 0 auto;
+      //         }
+      //     }
+      // }
+    }
+  }
+
+  .send-box {
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid #EEE;
+    padding-top: 8px;
+    position: absolute;
+    bottom: 0;
+
+    .send-body {
+      padding: 0 20px 20px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tool-bar {
+      overflow: hidden;
+      margin-bottom: 8px;
+
+      .tools {
+        width: 50%;
+        float: left;
+        display: none;
+
+        &.show {
+          display: block;
+        }
+
+        li {
+          display: inline-block;
+          margin-right: 20px;
+
+          .anticon {
+            font-size: 18px;
+            color: #888;
+          }
+          cursor: pointer;
+        }
+      }
+
+      .action-bar {
+        float: right;
+      }
+    }
+
+    .editor {
+      width: 100%;
+      height: 78%;
+      position: relative;
+
+      textarea {
+        width: 100%;
+        border: none;
+        background: #f8f8f8;
+        height: 125px;
+        resize: none;
+        padding: 8px;
+        border-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .email-editor {
+      .email-title {
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        height: 80px;
+      }
+    }
+
+    .tips {
+      text-align: right;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .voip {
+      width: 100%;
+      margin: 0 auto;
+
+      .note-send {
+        margin-top: 10px;
+        width: 100%;
+        border: none;
+        background: #f8f8f8;
+        height: 60px;
+        resize: none;
+        padding: 8px;
+        border-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .voip-status {
+        text-align: center;
+      }
+
+      .btn {
+        display: inline-block;
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        line-height: 60px;
+        text-align: center;
+        color: #FFF;
+        cursor: pointer;
+
+        &.inbound,
+        &.outbound {
+          background: #4dd863;
+        }
+
+        &.hangup {
+          background: #e1473f;
+        }
+      }
+    }
+  }
+}
+
+.ant-popover-inner {
+  .agent-list {
+    line-height: 2;
+    font-size: 14px;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.pic-preview {
+  max-width: 180px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.send-box-replies {
+  .ant-tabs-bar {
+    margin-bottom: 0;
+  }
+
+  .ant-tabs-tabpane {
+    height: 300px;
+    overflow-y: auto;
+
+    .replies {
+      line-height: 3;
+      padding: 20px;
+
+      li {
+        border-bottom: 1px solid #F3F3F3;
+        overflow: hidden;
+
+        span {
+          float: left;
+          display: inline-block;
+          width: 280px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .action {
+          transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          opacity: 1;
+          float: right;
+
+          a {
+            margin-left: 10px;
+          }
+        }
+
+        &:hover {
+          .action {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.chat-box-imgModal {
+  .ant-modal-footer {
+    display: none;
+  }
+}
+
+.customer-source-item {
+  //定义对话页面查看用户轨迹功能块的样式
+  p {
+    display: flex;
+    align-items: center;
+    height: 32px;
+
+    a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 5px;
+      white-space: nowrap;
+    }
+
+    i:before {
+      min-width: 20%;
+      font-size: 16px;
+      cursor: pointer;
+      color: #2db7f5;
+    }
+  }
+}
+
+.customer-source-pop {
+  ul.ant-pagination {
+    li.ant-pagination-prev {
+      margin-left: 45px;
+    }
+  }
+
+  .ant-timeline-item.ant-timeline-item-last {
+    height: 24px;
+  }
+
+  .ant-timeline-item-content {
+    max-width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  h5 {
+    padding: 0 0 10px;
+  }
+
+  li {
+    height: 28px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+.chatBox-fastReply {
+  // Created by jhli on 16-06-29.
+  position: absolute;
+  right: 0;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: #FFFFFF;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+
+  header {
+    height: 40px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      margin-left: 10px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin: 0 10px;
+        cursor: pointer;
+        color: #666;
+      }
+
+      i:nth-child(1) {
+        margin: 0;
+      }
+
+      i:nth-child(2) {
+        zoom: 1.5;
+      }
+    }
+  }
+
+  .chatBox-fastReply-tabContent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    bottom: 0;
+
+    .ant-tabs-bar {
+      margin-bottom: 0;
+
+      .ant-tabs-nav {
+        width: 100%;
+
+        .ant-tabs-ink-bar {
+          width: 50% !important;
+        }
+
+        .ant-tabs-tab {
+          width: 50%;
+          margin-right: 0;
+
+          .ant-tabs-tab-inner {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .ant-tabs-content {
+      position: absolute;
+      top: 36px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      .ant-tabs-tabpane {
+        ul {
+          font-size: 12px;
+          padding: 15px;
+
+          li:last-child {
+            margin-bottom: 0;
+          }
+
+          li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &:hover {
+              span:nth-child(1) {
+                color: #a9aeb1;
+              }
+            }
+
+            span:nth-child(1) {
+              font-weight: bold;
+              color: #3a4951;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fast-reply-in-editor {
+  // Created by jhli on 16-06-30.
+  top: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-height: 101px;
+  overflow: auto;
+  font-size: 12px;
+
+  li {
+    background: #EEEEEE;
+    border: 1px solid #fff;
+    padding: 0 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.active {
+      background: #CBCBCB;
+    }
+
+    &:hover {
+      background: #CBCBCB;
+    }
+
+    i {
+      color: red;
+      font-style: normal;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    span:nth-child(1) {
+      font-weight: bold;
+      margin-right: 10px;
+      margin-left: 5px;
+      color: #3a4951;
+    }
+  }
+}
+
+.apps-list {
+  h4 {
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #eee;
+  }
+
+  li {
+    padding-bottom: 7px;
+  }
+}
+
+.chat-sendBox-sms-container {
+  height       : 125px;
+  border-radius: 5px;
+  padding      : 8px;
+  position     : relative;
+  background   : rgb(248, 248, 248);
+
+  .smsTemplate-select {
+    span {
+      font-size: 12px;
+    }
+
+    .ant-select {
+      width: 160px;
+    }
+  }
+
+  .smsTemplate-content {
+    display    : flex;
+    align-items: center;
+    padding    : 8px;
+    position   : relative;
+
+    &:before {
+      content           : '';
+      border-color      : transparent;
+      border-style      : solid;
+      border-right-color: #E1EFF7;
+      border-width      : 12px 12px 12px 0;
+      position          : absolute;
+      top               : 30px;
+      left              : -2px;
+    }
+
+    & > div {
+      padding      : 10px;
+      background   : #E1EFF7;
+      border-radius: 5px;
+      width        : 80%;
+      height       : 74px;
+      overflow     : auto;
+      font-size    : 12px;
+      display      : flex;
+      align-items  : center;
+      flex-wrap    : wrap;
+    }
+
+    input {
+      width        : 80px;
+      background   : #E1EFF7;
+      border       : none;
+      border-bottom: 1px solid gray;
+      border-radius: 0;
+      height       : 18px;
+      text-align   : center;
+      outline      : none;
+
+      &::-webkit-input-placeholder {
+        color     : #ABA6A6;
+        text-align: center;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom  : 8px;
+    right   : 8px;
+  }
+}
